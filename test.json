@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "670fb918-dbb6-4abc-8453-bb65bfd7cf01",
+		"name": "Task Management APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51102347",
+		"_collection_link": "https://animeshvaish468-3731006.postman.co/workspace/Animesh-Vaish's-Workspace~b808ac87-36c1-4010-8af0-ce61d7ec8dc6/collection/51102347-670fb918-dbb6-4abc-8453-bb65bfd7cf01?action=share&source=collection_link&creator=51102347"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Spring Boot Assignment\",\r\n  \"description\": \"Complete HR assignment\",\r\n  \"priority\": \"HIGH\",\r\n  \"status\": \"PENDING\",\r\n  \"dueDate\": \"2024-12-31\",\r\n  \"user\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks by Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/status/PENDING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"status",
+						"PENDING"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks by Priority",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/priority/HIGH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"priority",
+						"HIGH"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task by Due Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/duedate/2024-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"duedate",
+						"2024-12-31"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
