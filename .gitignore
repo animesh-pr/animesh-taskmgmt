@@ -1,0 +1,15 @@
+# Logs
+*.log
+test_and_build.log
+cli_chathistory
+
+# Build folder
+target/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
